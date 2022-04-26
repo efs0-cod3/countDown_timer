@@ -11,6 +11,15 @@ let title = document.querySelector('.ttl');
 const msg = document.querySelector('.msg');
 const mbtn = document.querySelector('.msg-btn');
 
+// eventlisterners
+start.addEventListener('click', work);
+
+reset.addEventListener('click', clickToReset);
+
+paused.addEventListener('click', pause);
+
+notificationBtn.addEventListener('click', permission);
+
 // functions
 function notif() {
     if (Notification.permission === 'denied') {
@@ -135,18 +144,7 @@ function permission(){
     })
 }
 
-// eventlisterners
-start.addEventListener('click', work);
-
-reset.addEventListener('click', clickToReset);
-
-paused.addEventListener('click', pause);
-
-notificationBtn.addEventListener('click', permission);
 
  
-  start.onpointerdown = work;
-  reset.onpointerdown = clickToReset;
-  paused.onpointerdown = pause;
-  notificationBtn.onpointerdown = permission;
+  
   
